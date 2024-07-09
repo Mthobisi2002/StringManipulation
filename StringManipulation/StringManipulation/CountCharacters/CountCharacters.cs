@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StringManipulation.CountString
+namespace StringManipulation.CountCharacters
 {
-    public class CountString
+    public class CountCharacters
     {
         public int Counting(string word)
         {

@@ -1,31 +1,39 @@
-﻿////////////////Palindrome
+﻿using StringManipulation.Palindrome;
+using StringManipulation.CountCharacters;
+using StringManipulation.FindDuplicate;
+using StringManipulation.CountAccurances;
 
-using StringManipulation.Palindrome;
+namespace StringMan {
 
-Palindrome palindrome = new Palindrome();
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            //Palindrome
+            Console.WriteLine("Is Palindrome:");
+            Palindrome palindrome = new Palindrome();
+            bool check = palindrome.IsPalindrome("civic");
+            Console.WriteLine(check);
 
-bool check = palindrome.IsPalindrome("civic");
 
-Console.WriteLine(check);
+            //Count characters
+            Console.WriteLine("Characters count:");
+            CountCharacters countString = new CountCharacters();
+            int many = countString.Counting("Mthobisi");
+            Console.WriteLine(many);
 
+            //Count Word Occurrances
+            Console.WriteLine("Count word occurances:");
+            CountWordOccurrances countwordoccurrances = new CountWordOccurrances();
+            int CWO = countwordoccurrances.WordAccurrances("God", "God has always been God");
+            Console.WriteLine(CWO);
 
-//////////////Count String
+            //Count Character Occurances
+            Console.WriteLine("Count character occurrances");
+            CountCharacterOccurrances countcharacteroccurrances = new CountCharacterOccurrances();
+            int CCO = countcharacteroccurrances.CharacterOccurances('J', "Jesus is Jehova");
+            Console.WriteLine(CCO);
 
-//using StringManipulation.CountString;
-
-//CountString countString = new CountString();
-
-//int many = countString.Counting("Mthobisi");
-
-//Console.WriteLine(many);
-
-//////////////FindDuplicate
-
-//using StringManipulation.FindDuplicate;
-
-//FindDuplicate findDuplicate = new FindDuplicate ();
-
-//string[] check = findDuplicate.IsDuplicate("Mtho");
-
-//Console.WriteLine(check);
-
+        }
+    }
+}
